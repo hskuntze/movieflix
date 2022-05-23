@@ -1,0 +1,85 @@
+.movie-detail-card {
+  margin: 20px 10px;
+}
+
+.movie-detail-card h1 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.movie-detail-card h4 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #ffc700;
+}
+
+.movie-detail-card p {
+  font-size: 14px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.movie-detail-img {
+  text-align: center;
+  margin: 20px;
+  padding-top: 20px;
+}
+
+.movie-detail-img img {
+  width: 100%;
+}
+
+.movie-detail-card-info {
+  margin: 10px 20px 0px 20px;
+  padding-bottom: 20px;
+}
+
+.movie-detail-synopsis {
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+}
+
+.movie-detail-synopsis p {
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: -0.015em;
+  color: #9e9e9e;
+  margin: 13px;
+}
+
+@media (min-width: 768px) {
+  .movie-detail-img {
+    margin: 40px;
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .movie-detail-img {
+    margin: 0 150px 20px 150px;
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-detail-card {
+    display: flex;
+  }
+
+  .movie-detail-img {
+    margin: 0px 40px 150px 40px;
+    padding-top: 40px;
+  }
+
+  .movie-detail-img img {
+    width: 500px;
+    height: 315px;
+  }
+
+  .movie-detail-card-info {
+    margin: 40px 40px 40px 0px;
+  }
+}

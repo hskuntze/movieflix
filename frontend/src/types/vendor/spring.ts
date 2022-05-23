@@ -1,9 +1,11 @@
 export type SpringPage<T> = {
   content: T[];
   last: boolean;
-  totalPages: number;
   totalElements: number;
+  totalPages: number;
+  size: number;
+  number: number;
   first: boolean;
-  numberOfElements: number;
+  numberOfElements?: number;
   empty: boolean;
 };

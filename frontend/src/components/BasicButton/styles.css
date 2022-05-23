@@ -10,3 +10,21 @@
   width: 265px;
   height: 50px;
 }
+
+@media (min-width: 576px){
+  .button {
+    width: 496px;
+  }
+}
+
+@media (min-width: 768px){
+  .button {
+    width: 608px;
+  }
+}
+
+@media (min-width: 992px){
+  .button {
+    width: 400px;
+  }
+}

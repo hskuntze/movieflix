@@ -14,6 +14,12 @@ h6 {
   margin-bottom: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 a,
 a:hover {
   text-decoration: none;

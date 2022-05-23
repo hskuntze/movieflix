@@ -5,7 +5,7 @@ import Movies from "./pages/Movies";
 import history from "util/navigate";
 import Navbar from "components/Navbar";
 import PrivateRoute from "components/PrivateRoute";
-import Reviews from "pages/Reviews";
+import MovieDetail from "pages/MovieDetail";
 
 const Routes = () => {
   return (
@@ -25,7 +25,7 @@ const Routes = () => {
           path="/movies/:movieId"
           element={
             <PrivateRoute roles={["ROLE_VISITOR", "ROLE_MEMBER"]}>
-              <Reviews />
+              <MovieDetail />
             </PrivateRoute>
           }
         />

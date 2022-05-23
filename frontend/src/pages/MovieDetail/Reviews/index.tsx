@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { Review } from "types/review";
 import { hasAnyRoles } from "util/auth";
 import { requestBackend, requestBackendPost } from "util/requests";
+import { toast } from "react-toastify";
 import "./styles.css";
 
 type UrlParams = {
@@ -36,13 +37,9 @@ const Reviews = () => {
       url: `/movies/${movieId}/reviews`,
     };
 
-    requestBackend(params)
-      .then((response) => {
-        setMovieReviews(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    requestBackend(params).then((response) => {
+      setMovieReviews(response.data);
+    });
   }, [movieId, refresh]);
 
   const onSubmit = (formData: FormData) => {
@@ -52,19 +49,20 @@ const Reviews = () => {
       url: "/reviews",
       data: {
         ...formData,
-        movieId: Number(movieId)
-      }
+        movieId: Number(movieId),
+      },
     };
 
     requestBackendPost(params)
-      .then((response) => {
-        console.log(response.data);
+      .then(() => {
+        setRefresh(true);
+        toast.success("Publicado");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        toast.error("Erro ao publicar");
       })
       .finally(() => {
-        setRefresh(true);
+        setRefresh(false);
       });
   };
 
